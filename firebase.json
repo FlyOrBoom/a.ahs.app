@@ -1,0 +1,17 @@
+{
+  	"hosting": {
+		"site": "attenuate-ahs-app",
+		"public": "public",
+		"ignore": [
+			"firebase.json",
+			"**/.*",
+			"**/node_modules/**"
+		],
+		"rewrites": [
+			{
+				"source": "/**",
+				"function": "redirectURL"
+			}
+		]
+	}
+}

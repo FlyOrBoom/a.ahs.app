@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang=en-US dir=ltr>
+  	<head>
+		<meta charset=utf-8>
+
+		<title>AHS Attenuator</title>
+		<meta name=description content='Arcadia High URL shortener'>
+		<meta name=author content='Xing Liu'>
+		<meta name=viewport content='width=device-width, initial-scale=1.0'>
+
+		<link rel=icon type=image/png href=/icon.png>
+	</head>
+	<body>
+		<h1> a.ahs.app </h1>
+		<h2> Link Attenuator 9000 </h2>
+		<form method=POST
+			action=https://us-central1-arcadia-high-mobile.cloudfunctions.net/shortenURL>
+			<label>
+				<p> Add a shortcut from </p>
+				<p> a.ahs.app/<input name=a
+					type=text
+					placeholder=home
+					minlength=4
+					maxlength=512></p>
+			</label>
+			<label>
+				<p> to the link </p>
+				<p><input name=b
+					type=url
+					placeholder=https://ahs.ausd.net
+					maxlength=512></p>
+			</label>
+			<input type=submit>
+		</form>
+		<p>
+		Shortcuts must be at least 4 characters long.
+		Both shortcuts and full links must be less than 512 characters long.
+		</p>
+	</body>
+</html>
