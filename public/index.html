@@ -3,22 +3,60 @@
   	<head>
 		<meta charset=utf-8>
 
-		<title>AHS Attenuator</title>
-		<meta name=description content='Arcadia High URL shortener'>
+		<title> Awful Link Attenuatorer </title>
+		<meta name=description content='The link shortener for ahs.app'>
 		<meta name=author content='Xing Liu'>
 		<meta name=viewport content='width=device-width, initial-scale=1.0'>
 
 		<link rel=icon type=image/png href=/icon.png>
+		<style>
+html {
+  font-size: 16pt;
+  font-family: Helvetica, Roboto, Arial, sans-serif;
+  padding: 1rem;
+}
+h1 {
+  font-size: 1rem;
+}
+h1, h2 {
+  text-align: center;
+}
+h2 {
+  margin: 0;
+}
+label>:first-child {
+  font-style: italic;
+}
+label>:last-child{
+  color: blue;
+}
+input {
+  font-size: inherit;
+  color: inherit;
+}
+input::placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+input[type=submit] {
+  cursor: pointer;
+}
+footer {
+	opacity: 0.5;
+	font-style: italic;
+}
+		</style>
 	</head>
 	<body>
 		<h1> a.ahs.app </h1>
-		<h2> Link Attenuator 9000 </h2>
+		<h2> Awful Link Attenuatorer </h2>
 		<form method=POST
 			action=https://us-central1-arcadia-high-mobile.cloudfunctions.net/shortenURL>
 			<label>
 				<p> Add a shortcut from </p>
 				<p> a.ahs.app/<input name=a
 					type=text
+					required
 					placeholder=home
 					minlength=4
 					maxlength=512></p>
@@ -27,14 +65,22 @@
 				<p> to the link </p>
 				<p><input name=b
 					type=url
+					required
 					placeholder=https://ahs.ausd.net
 					maxlength=512></p>
 			</label>
 			<input type=submit>
 		</form>
-		<p>
-		Shortcuts must be at least 4 characters long.
-		Both shortcuts and full links must be less than 512 characters long.
-		</p>
+		<p> Shortcuts must be at least 4 characters long. </p>
+		<p> Both shortcuts and full links must be less than 512 characters long. </p>
+		<p> Shortcuts are case-insensitive, and all characters outside of
+			A–z and 0–9 will be converted to underscores (_). </p>
+		<p> Privacy policy: Any shortcut-link pair you submit may be stored by us
+			until the heat death of the universe, but we’re too tired to track anything else. </p>
+		<footer>
+			A.ahs.app is steaming piece of garbage code written 
+			in one long night by <a href=https://x-ing.space>Xing Liu</a>
+			of the AHS App Development Team. Please don’t DDOS us.
+		</footer>
 	</body>
 </html>
